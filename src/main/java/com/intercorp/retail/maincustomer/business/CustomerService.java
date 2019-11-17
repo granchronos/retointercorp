@@ -45,7 +45,7 @@ public class CustomerService {
         return customerRepository
                 .findAll()
                 .stream()
-                .map(Customer::of)
+                .map(Customer::with)
                 .collect(Collectors.toList());
     }
 

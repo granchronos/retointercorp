@@ -22,18 +22,9 @@ public class MainCustomerApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-
         customerRepository.save(CustomerEntity.of("Antony", "Velasquez", 23, new GregorianCalendar(1996, Calendar.MARCH, 29).getTime()));
         customerRepository.save(CustomerEntity.of("Diana", "Centeno", 21, new GregorianCalendar(1997, Calendar.MARCH, 29).getTime()));
         customerRepository.save(CustomerEntity.of("Julio", "Ruiz", 61, new GregorianCalendar(1958, Calendar.MARCH, 29).getTime()));
-
-
-        System.out.println("\nfindAll()");
-        customerRepository.findAll().forEach(System.out::println);
-
-        System.out.println("\nfindById(1L)");
-        customerRepository.findById(1L).ifPresent(System.out::println);
-
     }
 
 }
