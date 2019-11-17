@@ -6,9 +6,9 @@ Try it out:
 
 | Method | Command CURL |
 | ------ | ------ |
-| POST - creacliente | [curl -X POST "http://main-customer-1573970198442.azurewebsites.net/creacliente" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"apellido\": \"Mokey D.\", \"edad\": 20, \"fechaNacimiento\": \"1998-10-23\", \"nombre\": \"Luffy\"}"] |
-| GET - kpideclientes | [curl -X GET "http://main-customer-1573970198442.azurewebsites.net/kpideclientes" -H "accept: */*"] |
-| GET - listclientes | [curl -X GET "http://main-customer-1573970198442.azurewebsites.net/listclientes" -H "accept: */*"] |
+| POST - creacliente | curl -X POST "http://main-customer-1573970198442.azurewebsites.net/creacliente" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"apellido\": \"Mokey D.\", \"edad\": 20, \"fechaNacimiento\": \"1998-10-23\", \"nombre\": \"Luffy\"}" |
+| GET - kpideclientes | curl -X GET "http://main-customer-1573970198442.azurewebsites.net/kpideclientes" -H "accept: */*" |
+| GET - listclientes | curl -X GET "http://main-customer-1573970198442.azurewebsites.net/listclientes" -H "accept: */*" |
 
 For local deployment
 
