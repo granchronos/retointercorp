@@ -19,18 +19,18 @@ public class CustomerExpose {
 
     private final CustomerService customerService;
 
-    @PostMapping("createcliente")
+    @PostMapping("creacliente")
     private ResponseEntity<Customer> create(@RequestBody Customer customer) throws CustomerException {
         Customer response = customerService.saveCustomer(customer);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
-    @GetMapping("kpiclientes")
+    @GetMapping("kpideclientes")
     private ResponseEntity<KpiCustomers> obtainData() {
         return ResponseEntity.ok(customerService.getKpiCustomers());
     }
 
-    @GetMapping("listaclientes")
+    @GetMapping("listclientes")
     public ResponseEntity<List<Customer>> obtainAll() {
         return ResponseEntity.ok(customerService.getAllCustomers());
     }
