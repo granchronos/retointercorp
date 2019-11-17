@@ -2,22 +2,23 @@ package com.intercorp.retail.maincustomer;
 
 import com.intercorp.retail.maincustomer.repository.entity.CustomerEntity;
 import com.intercorp.retail.maincustomer.repository.entity.facade.CustomerRepository;
-import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 @SpringBootApplication
-@AllArgsConstructor
-public class MainCustomerApplication implements CommandLineRunner {
+public class MainCustomerApplication extends SpringBootServletInitializer implements CommandLineRunner {
 
-    private final CustomerRepository customerRepository;
+    @Autowired
+    private CustomerRepository customerRepository;
 
     public static void main(String[] args) {
-        SpringApplication.run(MainCustomerApplication.class, args);
+        new MainCustomerApplication().configure(new SpringApplicationBuilder(MainCustomerApplication.class)).run(args);
     }
 
     @Override
