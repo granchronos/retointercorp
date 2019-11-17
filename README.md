@@ -34,7 +34,7 @@ http://localhost:8080/listclientes
 
 ### Deploymet By
 
- - Antony Velasquez RUiz
+ - Antony Velasquez Ruiz
 
 License
 ----
